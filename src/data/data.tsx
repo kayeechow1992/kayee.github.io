@@ -7,7 +7,7 @@ import {
 
 import GithubIcon from '../components/Icon/GithubIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
-import heroImage from '../images/header-background.webp';
+import heroImage from '../images/header-background.jpg';
 import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
 import profilepic from '../images/profilepic.jpg';
 import {
@@ -36,8 +36,8 @@ export const homePageMeta: HomepageMeta = {
 export const SectionId = {
     Hero: 'hero',
     About: 'about',
-    Portfolio: 'portfolio',
-    Resume: 'resume',
+    Publications: 'publications',
+    Experience: 'experience',
     Skills: 'skills',
     Stats: 'stats',
     Footer: 'footer'
@@ -65,11 +65,6 @@ export const heroData: Hero = {
             text: 'Resume',
             primary: true,
             Icon: ArrowDownTrayIcon,
-        },
-        {
-            href: `#${SectionId.Footer}`,
-            text: 'Connect',
-            primary: false,
         },
     ],
 };
@@ -148,16 +143,25 @@ export const portfolioItems: PortfolioItem[] = [
  */
 export const education: TimelineItem[] = [
     {
-        date: 'April 2007',
-        location: 'Clown college',
-        title: 'Masters in Beer tasting',
-        content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+        date: 'Current',
+        location: 'University of Texas, Austin, TX',
+        title: 'Ph.D. in Public Affairs',
     },
     {
-        date: 'March 2003',
-        location: 'School of Business',
-        title: 'What did you study 101',
-        content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+        date: 'May 2019',
+        location: 'Texas Tech University, Lubbock, TX',
+        title: 'MA in Political Science',
+    },
+    {
+        date: 'May 2017',
+        location: 'Texas Tech University, Lubbock, TX',
+        title: 'MPA in Political Science',
+    },
+    {
+        date: 'June 2015',
+        location: 'Sun Yat-Sen University, Guangzhou, China',
+        title: 'BA in Law',
+        content: (<p>&emsp;&#x2022; Majors: Political Science and Public Administration</p>)
     },
 ];
 

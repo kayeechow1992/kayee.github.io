@@ -5,8 +5,8 @@ import Page from '../components/Layout/Page';
 import About from '../components/Sections/About';
 import Footer from '../components/Sections/Footer';
 import Hero from '../components/Sections/Hero';
-import Portfolio from '../components/Sections/Portfolio';
-import Resume from '../components/Sections/Resume';
+import Publications from '../components/Sections/Publications';
+import Experience from '../components/Sections/Resume';
 import {homePageMeta} from '../data/data';
 
 // eslint-disable-next-line react-memo/require-memo
@@ -19,8 +19,8 @@ const Home: FC = memo(() => {
       <Header />
       <Hero />
       <About />
-      <Resume />
-      <Portfolio />
+      <Experience />
+      <Publications />
       <Footer />
     </Page>
   );
