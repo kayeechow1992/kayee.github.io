@@ -80,8 +80,8 @@ race, ethnicity, and identity politics, and public policies of China. Proficient
 analysis, and machine learning for text analysis by using Stata and R, and qualitative methods, including
 interviews and focus groups.`,
     aboutItems: [
-        {label: 'Education', text: 'University of Texas', Icon: AcademicCapIcon},
-        {label: 'Location', text: 'Austin, TX', Icon: MapIcon},
+        {label: 'Education', text: (<a className="about-link" href="https://www.google.com/search?q=university+of+texas+at+austin+qs+ranking">University of Texas</a>), Icon: AcademicCapIcon},
+        {label: 'Location', text: (<a className="about-link" href="https://www.google.com/search?q=Austin+TX">Austin, TX</a>), Icon: MapIcon},
         {label: 'Interests', text: 'Ethnic politics (particularly Asian American political attitudes and behavior); immigration policy; politics and public policy in China', Icon: SparklesIcon},
     ],
 };
