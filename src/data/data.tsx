@@ -36,10 +36,12 @@ export const homePageMeta: HomepageMeta = {
 export const SectionId = {
     Hero: 'hero',
     About: 'about',
-    Publications: 'publications',
+    Education: 'education',
+    Portfolios: 'portfolios',
     Experience: 'experience',
     Skills: 'skills',
     Stats: 'stats',
+    Publications: 'publications',
     Footer: 'footer'
 } as const;
 
@@ -80,9 +82,23 @@ race, ethnicity, and identity politics, and public policies of China. Proficient
 analysis, and machine learning for text analysis by using Stata and R, and qualitative methods, including
 interviews and focus groups.`,
     aboutItems: [
-        {label: 'Education', text: (<a className="about-link" href="https://www.google.com/search?q=university+of+texas+at+austin+qs+ranking">University of Texas</a>), Icon: AcademicCapIcon},
-        {label: 'Location', text: (<a className="about-link" href="https://www.google.com/search?q=Austin+TX">Austin, TX</a>), Icon: MapIcon},
-        {label: 'Interests', text: 'Ethnic politics (particularly Asian American political attitudes and behavior); immigration policy; politics and public policy in China', Icon: SparklesIcon},
+        {
+            label: 'Education',
+            text: (<a className="about-link"
+                      href="https://www.google.com/search?q=university+of+texas+at+austin+qs+ranking">University of
+                Texas</a>),
+            Icon: AcademicCapIcon
+        },
+        {
+            label: 'Location',
+            text: (<a className="about-link" href="https://www.google.com/search?q=Austin+TX">Austin, TX</a>),
+            Icon: MapIcon
+        },
+        {
+            label: 'Interests',
+            text: 'Ethnic politics (particularly Asian American political attitudes and behavior); immigration policy; politics and public policy in China',
+            Icon: SparklesIcon
+        },
     ],
 };
 
@@ -139,7 +155,7 @@ export const portfolioItems: PortfolioItem[] = [
 ];
 
 /**
- * Resume section -- TODO: Standardize resume contact format or offer MDX
+ * Experience section -- TODO: Standardize resume contact format or offer MDX
  */
 export const education: TimelineItem[] = [
     {
@@ -150,7 +166,7 @@ export const education: TimelineItem[] = [
     {
         date: 'May 2019',
         location: 'Texas Tech University, Lubbock, TX',
-        title: 'MA in Political Science',
+        title: 'M.A. in Political Science',
     },
     {
         date: 'May 2017',
@@ -160,8 +176,8 @@ export const education: TimelineItem[] = [
     {
         date: 'June 2015',
         location: 'Sun Yat-Sen University, Guangzhou, China',
-        title: 'BA in Law',
-        content: (<p>&emsp;&#x2022; Majors: Political Science and Public Administration</p>)
+        title: 'B.A. in Law',
+        content: (<p className="align-left">&emsp;&#x2022; Majors: Political Science and Public Administration</p>)
     },
 ];
 
@@ -171,10 +187,10 @@ export const researchExperience: TimelineItem[] = [
         location: 'Child and Family Research Partnership (CFRP) Center',
         title: 'Graduate Research Assistant',
         content: (
-            <p>
+            <p className="align-left">
                 Projects: <br/>
                 1) Texas Home Visiting Program - Describing Home Visiting’s Value Evaluation III: The
-Connection Between THV and Child Wellbeing<br/>
+                Connection Between THV and Child Wellbeing<br/>
                 2) Protective and Compensatory Experience<br/>
                 <span>&emsp;&#x2022; Cleaned, matched, processed, and analyzed large datasets using Stata and R</span><br/>
                 <span>&emsp;&#x2022; Created analysis report based on produced results</span>
@@ -186,8 +202,9 @@ Connection Between THV and Child Wellbeing<br/>
         location: 'The University of Texas at Austin',
         title: 'Graduate Research Assistant',
         content: (
-            <p>
-                Worked with Dr. Raissa Fabregas on the extension of <i>The Effectiveness of Public Agricultural Extension: Evidence from Farmer Field Days in Kenya</i> <br/>
+            <p className="align-left">
+                Worked with Dr. Raissa Fabregas on the extension of <i>The Effectiveness of Public Agricultural
+                Extension: Evidence from Farmer Field Days in Kenya</i> <br/>
                 <span>&emsp;&#x2022; Matched and merged multiple datasets and performed analysis using Stata</span><br/>
                 <span>&emsp;&#x2022; Transformed results with LaTeX, verified analytical results, and edited papers</span>
             </p>
@@ -198,7 +215,7 @@ Connection Between THV and Child Wellbeing<br/>
         location: 'Nanhai District, China',
         title: 'Member of the Research Team',
         content: (
-            <p>
+            <p className="align-left">
                 Project: Analyze the Separation of Administration and Economic Reform among Village Committees<br/>
                 <span>&emsp;&#x2022; Collected and analyzed policy documents, minutes from meetings, and progress reports about the
 reform from local governments and village committees</span><br/>
@@ -211,7 +228,7 @@ reform from local governments and village committees</span><br/>
         location: 'Luogang District, China',
         title: 'Research Assistant',
         content: (
-            <p>
+            <p className="align-left">
                 Project: Evaluate the Administrative Approval Reform of Local Government<br/>
                 <span>&emsp;&#x2022; Reviewed policy documents, minutes from meetings and implementation plans about the reform
 conducted by the Luogang government</span><br/>
@@ -224,7 +241,7 @@ conducted by the Luogang government</span><br/>
         location: 'Nanhai District, China',
         title: 'Research Assistant',
         content: (
-            <p>
+            <p className="align-left">
                 Project: Assess Social Work Agencies’ Performance in Providing Elder Care Services<br/>
                 <span>&emsp;&#x2022; Conducted documentation reviews and observations to evaluate 5 agencies’ performances</span><br/>
                 <span>&emsp;&#x2022; Interviewed 10 leaders, 13 frontline social workers, and 20 clients on agencies’ services</span><br/>
@@ -237,7 +254,7 @@ conducted by the Luogang government</span><br/>
         location: 'Nanhai District, China',
         title: 'Research Assistant',
         content: (
-            <p>
+            <p className="align-left">
                 Project: Assess Social Work Agencies’ Performance in Providing Elder Care Services<br/>
                 <span>&emsp;&#x2022; Conducted documentation reviews and observations to evaluate 5 agencies’ performances</span><br/>
                 <span>&emsp;&#x2022; Interviewed 10 leaders, 13 frontline social workers, and 20 clients on agencies’ services</span><br/>
@@ -250,7 +267,7 @@ conducted by the Luogang government</span><br/>
         location: 'Nanhai District, China',
         title: 'Research Assistant',
         content: (
-            <p>
+            <p className="align-left">
                 Project: Research on the Elder Care Services in Nanhai District<br/>
                 <span>&emsp;&#x2022; Conducted participant observation at Nursing Home at Danzao Town for 3 months</span><br/>
                 <span>&emsp;&#x2022; Implemented a survey on 700 elders over 60 years old</span><br/>
@@ -265,7 +282,7 @@ efforts with social welfare policies of developed countries</span>
         location: 'Nanhai District, China',
         title: 'Member of the Research Team',
         content: (
-            <p>
+            <p className="align-left">
                 Project: Research on the Local Culture of the Historic Villages<br/>
                 <span>&emsp;&#x2022; Collected, reviewed and evaluated family documents and historical records of an ancient village
 in Danzao Town, such as records on the lives and kinship ties of ancestors and stories of historical
@@ -283,7 +300,7 @@ Town to introduce the hidden local culture to the public</span>
         location: 'Sun Yat-sen University',
         title: 'Member of the Research Team',
         content: (
-            <p>
+            <p className="align-left">
                 Project: Research on the School Consolidation in China<br/>
                 <span>&emsp;&#x2022; Reviewed policy documents and news on the school consolidation</span><br/>
                 <span>&emsp;&#x2022; Wrote a report based on a case study on the school consolidation happened in a poverty county</span><br/>
@@ -293,6 +310,153 @@ won the 2nd prize out of 140 teams</span>
         ),
     },
 ];
+
+export const teachingExperience: TimelineItem[] = [
+    {
+        date: 'January 2022 – May 2023',
+        location: 'LBJ School of Public Affairs, University of Texas at Austin',
+        title: 'Teaching Assistant',
+        content: (
+            <div>
+                <p className="align-left">
+                    PA 397: Introduction to Empirical Methods for Policy Analysis<br/>
+                    <span>&emsp;&#x2022; Nominated for LBJ Graduate Teaching Assistant Award</span><br/>
+                    <span>&emsp;&#x2022; Conducted two weekly sections for over 30 master students (each course) to teach quantitative
+methods, and the use of R in data analysis</span>
+                </p>
+                <p className="align-left">
+                    PA 397C: Program Evaluation for Nonprofit and Social Impact<br/>
+                    <span>&emsp;&#x2022; Teach both quantitative and qualitative methods, and the use of R</span>
+                </p>
+                <p className="align-left">
+                    PA 397G: Analytical Methods for Global Policy Studies<br/>
+                    <span>&emsp;&#x2022; Teach quantitative methods, and the use of Stata</span>
+                </p>
+            </div>
+        ),
+    },
+    {
+        date: 'January 2019 – May 2019',
+        location: 'Department of Political Science, Texas Tech University',
+        title: 'Teaching Assistant',
+        content: (
+            <div>
+                <p className="align-left">
+                    PUAD 5352: Public Policy Analysis<br/>
+                    <span>&emsp;&#x2022; Monitored and facilitated in-class discussion for 30 master students</span><br/>
+                    <span>&emsp;&#x2022; Provided mentoring and guidance to students, aiding them in the drafting of policy memos</span>
+                </p>
+            </div>
+        ),
+    },
+    {
+        date: 'September 2015 – December 2018',
+        location: 'Department of Political Science, Texas Tech University',
+        title: 'Grader',
+        content: (
+            <div>
+                <p className="align-left">
+                    POLS 2306: Texas Politics and Topics (Online Course)
+                </p>
+                <p className="align-left">
+                    POLS 1301: American Government (Online Course)
+                </p>
+            </div>
+        ),
+    }
+];
+
+/**
+ * Research works section
+ */
+export const researchWorks = {
+  "Publications": [
+    "@article{https://doi.org/10.1111/ssqu.13050,\n" +
+    "author = {Zhou, Kayee and Patterson, Dennis},\n" +
+    "title = {Changing Patterns of Asian-American Partisanship: Accounting for the Politicization of the U.S.'s Fastest Growing Minority},\n" +
+    "journal = {Social Science Quarterly},\n" +
+    "volume = {102},\n" +
+    "number = {4},\n" +
+    "pages = {1428-1438},\n" +
+    "doi = {10.1111/ssqu.13050},\n" +
+    "url = {https://onlinelibrary.wiley.com/doi/abs/10.1111/ssqu.13050},\n" +
+    "eprint = {https://onlinelibrary.wiley.com/doi/pdf/10.1111/ssqu.13050},\n" +
+    "abstract = {Abstract Asian Americans are the fastest growing and most diverse minority in the United States, but they have become more alike in terms of their partisan preferences and increasing politicization. Evidence for these changes can be found in two National Surveys of Asian Americans, the first of which was completed in 2008 and showed that Asian Americans were mostly nonpartisans but also that those who were partisans tended to support the Democratic Party. The second survey, completed in 2016, however, indicated that there was an increase in the proportion of democratic identifiers and, also, a significant decline in the proportion of nonpartisans with a concomitant rise in the number of purposive Independents. These shifts suggest that there has been a distinct politicization of Asian Americans, and our purpose in this article is to identify and calibrate the factors that account for these partisan shifts.},\n" +
+    "year = {2021}\n" +
+    "}",
+    "@article{nUOhEAAAQBAJ,\n" +
+    "booktitle= {破局: 中国治理变革的地方样本 [Break the Deadlock: Exploring the Chinese way of local governance reform]},\n" +
+    "title={提高产能空间,城市升值构动力 [Optimizing City's \n" +
+    "Production Capacity to Improve its Competitiveness]},\n" +
+    "author={Ye, Lin and Yingling Gao and Kayee Zhou},\n" +
+    "editor={He, Yanling},\n" +
+    "isbn={9787520103763},\n" +
+    "lccn={2018364285},\n" +
+    "url={https://books.google.com/books?id=nUOhEAAAQBAJ},\n" +
+    "year={2018},\n" +
+    "publisher={社会科学文献出版社 [Social Sciences Academic Press]},\n" +
+    "pages = {98–129}\n" +
+    "}"
+  ],
+  "Manuscripts": [
+    "@article{TheElectoralCycleandPolicyOutcomes,\n" +
+    "author = {Patterson, Dennis and Zhou, Kayee},\n" +
+    "title = {The Electoral Cycle and Policy Outcomes: Toward an Explanaiton for the Content of Policy in the United States}\n" +
+    "}",
+    "@article{PredictivePowerofSelf-ReportedIdeology,\n" +
+    "author = {Heise, Sarah and Somaraju, Ajay and Zhou, Kayee and Osa, God'swill},\n" +
+    "title = {Predictive Power of Self-Reported Ideology from 1972 – 2020}\n" +
+    "}",
+    "@article{workingPaper1,\n" +
+    "author = {Zhou, Kayee},\n" +
+    "title = {Impacts of U.S. Local Immigrant Integration Policies on Immigrants’ Political\n" +
+    "Participation}\n" +
+    "}",
+    "@article{workingPaper2,\n" +
+    "author = {Zhou, Kayee},\n" +
+    "title = {Immigrants' Group Identities and Collective Actions}\n" +
+    "}",
+    "@article{workingPaper3,\n" +
+    "author = {Zhou, Kayee},\n" +
+    "title = {Dynamics of Governmental Cooperation with Immigrant-focused Nonprofits}\n" +
+    "}",
+    "@article{workingPaper4,\n" +
+    "author = {Zhou, Kayee},\n" +
+    "title = {Legislative Gridlock on Comprehensive Immigration Reforms}\n" +
+    "}",
+    "@article{workingPaper5,\n" +
+    "author = {Zhou, Kayee},\n" +
+    "title = {Asian American Group Identity, Consciousness, and Political Participation}\n" +
+    "}",
+    "@article{workingPaper6,\n" +
+    "author = {Zhou, Kayee},\n" +
+    "title = {Discrimination, Emotion, and Action: Explaining Political Participation of U.S. \n" +
+    "Minorities}\n" +
+    "}",
+    "@article{workingPaper7,\n" +
+    "author = {Paul, Sandeep and Zhou, Kayee and Jones, Jessica and Bixler, Patrick},\n" +
+    "title = {Who is My Neighbor? Exploring the Role of Social Capital in Disaster Preparedness and Adaptive Capacity in Urban Texas}\n" +
+    "}",
+    "@article{workingPaper8,\n" +
+    "author = {Heise, Sarah and Zhou, Kayee and Somaraju, Ajay and Osa, God'swill},\n" +
+    "title = {Cross-Pressured Asian-Americans and Vote Choice}\n" +
+    "}",
+    "@article{workingPaper9,\n" +
+    "author = {Osa, God'swill and Kayee and Somaraju, Ajay and Heise, Sarah},\n" +
+    "title = {Social Identity Informed Model of Partisanship Formation: A Network Simulation Study}\n" +
+    "}",
+    "@article{workingPaper10,\n" +
+    "author = {Chan, Wing, Kit and Kayee Zhou},\n" +
+    "title = {Rat Race versus Lying Flat: Why University Qualification Fails to Promote Social Mobility in China}\n" +
+    "}",
+    "@incollection{workingPaper11,\n" +
+    "author = {Zhou, Kayee and Sanderson, Mackenzie and Sarkissian, Holly},\n" +
+    "booktitle = {Global Development: Poverty, Inequality and the Politics of Data},\n" +
+    "title = {Governance},\n" +
+    "editor = {Weaver, Catherine and Ma, Ji and McLaren, Janet}\n" +
+    "}"
+  ]
+}
 
 /**
  * Social items

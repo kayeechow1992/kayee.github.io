@@ -5,9 +5,11 @@ import Page from '../components/Layout/Page';
 import About from '../components/Sections/About';
 import Footer from '../components/Sections/Footer';
 import Hero from '../components/Sections/Hero';
-import Publications from '../components/Sections/Publications';
-import Experience from '../components/Sections/Resume';
+import Experience from '../components/Sections/Experience';
 import {homePageMeta} from '../data/data';
+import Education from "../components/Sections/Education";
+import ResearchWorks from "../components/Sections/ResearchWorks";
+import Skills from "../components/Sections/Skills";
 
 // eslint-disable-next-line react-memo/require-memo
 const Header = dynamic(() => import('../components/Sections/Header'), {ssr: false});
@@ -16,12 +18,14 @@ const Home: FC = memo(() => {
   const {title, description} = homePageMeta;
   return (
     <Page description={description} title={title}>
-      <Header />
-      <Hero />
-      <About />
-      <Experience />
-      <Publications />
-      <Footer />
+      <Header/>
+      <Hero/>
+      <About/>
+      <Education/>
+      <ResearchWorks/>
+      <Experience/>
+      <Skills/>
+      <Footer/>
     </Page>
   );
 });
