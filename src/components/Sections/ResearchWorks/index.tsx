@@ -8,6 +8,7 @@ import {
   CitationTemplateLoader,
   defaultCitationStyle
 } from "../../../data/CitationTemplateLoader";
+import CopyIcon from "../../Icon/CopyIcon";
 
 const Cite = require('citation-js')
 
@@ -67,8 +68,22 @@ const ResearchWorks: FC = memo(() => {
                     template: currentCitationFormat
                   })
                 )
-                return <div key={`${researchWorkType}_${index}`} className="bibliography"
-                            dangerouslySetInnerHTML={{__html: htmlContent}}/>
+                const id = `${researchWorkType}_${index}`;
+                return (
+                  <div className="group flex flex-row justify-between">
+                    <div id={id} key={id} className="bibliography" style={{
+                      fontFamily: "'Times New Roman', Tinos, 'Liberation Serif', serif",
+                      marginLeft: "0.5in",
+                      textIndent: "-0.5in",
+                      maxWidth: "calc(100% - 0.5in)",
+                      width: "calc(100% - 0.5in)",
+                      wordBreak: "break-word"
+                    }} dangerouslySetInnerHTML={{__html: htmlContent}}/>
+                    <div className="w-[30px] min-w-[30px]">
+                      <CopyIcon className="mt-1 ml-auto md:invisible group-hover:visible" contentId={id}/>
+                    </div>
+                  </div>
+                )
               })}
             </ResumeSection>
           })
