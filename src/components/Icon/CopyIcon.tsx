@@ -2,17 +2,17 @@ import {FC, memo} from 'react';
 
 import Image from "next/image";
 
-const copyContent = (contentId) => {
-  function listener(e) {
-    const contentElement = document.getElementById(contentId);
-    const childElement = contentElement.firstElementChild.firstElementChild;
-    e.clipboardData.setData("text/plain", contentElement.innerText);
-    const html = `
-      <p style="margin-left: 1cm; text-indent: -1cm;">
-        ${childElement.innerHTML.replaceAll("<b>", "").replaceAll("</b>", "")}
-      </p>
-    `;
-    e.clipboardData.setData("text/html", html);
+const copyContent = (contentId: string) => {
+  function listener(e: ClipboardEvent) {
+    const contentElement = document.getElementById(contentId)!;
+    e.clipboardData!.setData("text/plain", contentElement.innerText);
+    let htmlContent = contentElement.innerHTML;
+    const childElement = contentElement.firstElementChild?.firstElementChild;
+    if (childElement) {
+      htmlContent = childElement.innerHTML.replaceAll("<b>", "").replaceAll("</b>", "");
+    }
+    const html = `<p style="margin-left: 1cm; text-indent: -1cm;">${htmlContent}</p>`;
+    e.clipboardData!.setData("text/html", html);
     e.preventDefault();
   }
 

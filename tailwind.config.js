@@ -1,5 +1,10 @@
 // eslint-disable-next-line no-undef
 module.exports = {
+  variants: {
+    extend: {
+      visibility: ["group-hover"],
+    },
+  },
   content: ['./src/**/*.{js,ts,jsx,tsx,css,scss}'],
   // darkMode: 'media', // or 'media' or 'class'
   theme: {
