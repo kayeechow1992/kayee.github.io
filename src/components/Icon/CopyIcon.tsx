@@ -1,6 +1,7 @@
 import {FC, memo} from 'react';
 
 import Image from "next/image";
+import {alertService} from "../../services/alert.service";
 
 const copyContent = (contentId: string) => {
   function listener(e: ClipboardEvent) {
@@ -9,10 +10,13 @@ const copyContent = (contentId: string) => {
     let htmlContent = contentElement.innerHTML;
     const childElement = contentElement.firstElementChild?.firstElementChild;
     if (childElement) {
-      htmlContent = childElement.innerHTML.replaceAll("<b>", "").replaceAll("</b>", "");
+      htmlContent = childElement.innerHTML
+        .replaceAll("<b>", "")
+        .replaceAll("</b>", "");
     }
-    const html = `<p style="margin-left: 1cm; text-indent: -1cm;">${htmlContent}</p>`;
+    const html = `<p style="margin-left: 0.5in; text-indent: -0.5in;">${htmlContent}</p>`;
     e.clipboardData!.setData("text/html", html);
+    alertService.info(`Copied: ${contentElement.innerText}`, {autoClose: true, keepAfterRouteChange: true});
     e.preventDefault();
   }
 

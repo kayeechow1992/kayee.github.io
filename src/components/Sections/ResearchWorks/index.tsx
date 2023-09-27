@@ -26,7 +26,7 @@ const ResearchWorks: FC = memo(() => {
           data-te-dropdown-toggle-ref
           aria-expanded="false"
           data-te-ripple-init
-          data-te-ripple-color="light">Citation Format
+          data-te-ripple-color="light">{currentCitationFormat}
           <span className="ml-2 w-2"><svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
