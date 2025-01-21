@@ -463,7 +463,7 @@ export const researchWorks = {
  */
 export const socialLinks: Social[] = [
     {label: 'Github', Icon: GithubIcon, href: 'https://github.com/kayeechow1992'},
-    {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/jiayi-kayee-zhou-014678109/'},
+    {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/kayee-zhou-014678109'},
     {label: 'Facebook', Icon: FacebookIcon, href: 'https://www.facebook.com/kayee.chow.710'},
     {label: 'Gmail', Icon: GmailIcon, href: 'mailto:kayee@utexas.edu'},
 ];
